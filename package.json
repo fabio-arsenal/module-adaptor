@@ -1,0 +1,49 @@
+{
+  "name": "module-adaptor",
+  "version": "1.0.6",
+  "description": "Adapter for ES6 modules",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "lerna clean --yes",
+    "format": "prettier --write 'packages/*/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx)' 'packages/*/!(node_modules)/**/*.js'",
+    "build-docs": "node ./scripts/build-docs.mjs",
+    "prepublish": "babel index.js -d lib",
+    "publish-all": "node ./scripts/publish-all.mjs",
+    "publish-all-stable": "yarn publish-all -c -t --push && release && node ./scripts/release-notes.js",
+    "publish-all-canary": "yarn publish-all -p canary -c -t --push && release --pre",
+    "publish-all-alpha": "yarn publish-all -p alpha -c -t --push && release --pre",
+    "pre-publish-all": "yarn build-docs && yarn update-examples",
+    "publish-to-npm": "node ./scripts/publish-to-npm.js",
+    "git-reset": "git reset --hard HEAD",
+    "git-clean": "git clean -d -x -e node_modules -e packages -f"
+  },
+  "repository": "https://github.com/fabio-arsenal/module-adaptor",
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@types/node": ">=18",
+    "execa": "^9.5.2",
+    "fs-extra": "^11.2.0",
+    "glob": "^11.0.0",
+    "inquirer": "^12.3.0",
+    "release": "^6.3.1",
+    "semver": "^7.6.3",
+    "yargs": "^17.7.2"
+  },
+  "author": "fabio <fabio@arsenalbio.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "url-join": "^5.0.0"
+  },
+  "engines": {
+    "node": "20.5.0"
+  },
+  "resolutions": {
+    "cliui/string-width": "4.2.0",
+    "execa": "9.5.2",
+    "string-width": "4.2.0",
+    "string-width/strip-ansi": "6.0.0",
+    "strip-ansi": "6.0.0"
+  }
+}
