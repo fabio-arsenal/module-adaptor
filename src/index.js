@@ -1,3 +1,3 @@
-import join from 'url-join';
+const join = require('url-join');
 
 export const urlJoin = (...args) => join(...args);

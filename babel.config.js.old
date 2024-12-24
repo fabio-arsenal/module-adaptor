@@ -4,10 +4,10 @@ module.exports = api => {
         {
             "loose": true,
             "targets": { "node": 18 },
-            "modules": 'commonjs'
+            "modules": 'amd'
         }
     ]]
-    const ignore = ['./src/tooltip.js']
+    const ignore = []
     const plugins = ["@babel/plugin-syntax-dynamic-import",
         ["@babel/plugin-transform-modules-commonjs", {
             "allowTopLevelThis": true
