@@ -1,6 +1,6 @@
 {
   "name": "module-adaptor",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Adapter for ES6 modules",
   "main": "dist/bundle.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "clean": "lerna clean --yes",
     "format": "prettier --write 'packages/*/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx)' 'packages/*/!(node_modules)/**/*.js'",
     "build-docs": "node ./scripts/build-docs.mjs",
-    "prepublish": "babel index.js -d lib",
+    "prepublish": "webpack --config webpack.config.js",
     "npm-publish": "npm publish --tag latest --registry=https://registry.npmjs.org/ --access public",
     "publish-all": "node ./scripts/publish-all.mjs",
     "publish-all-stable": "yarn publish-all -c -t --push && release && node ./scripts/release-notes.js",
