@@ -1,6 +1,6 @@
 {
   "name": "module-adaptor",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Adapter for ES6 modules",
   "main": "dist/bundle.js",
   "scripts": {
@@ -41,7 +41,7 @@
   "author": "fabio <fabio@arsenalbio.com>",
   "license": "MIT",
   "private": false,
-  "dependencies": {
+  "optionalDependencies": {
     "url-join": "^5.0.0"
   },
   "engines": {

@@ -5,7 +5,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        library: 'MyLibrary', // Replace with your library name
+        globalObject: 'this', // Ensures compatibility in both Node.js and browsers
+        library: 'module-adaptor', // Replace with your library name
         libraryTarget: 'umd', // Export as a UMD module for compatibility
     },
     module: {
