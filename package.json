@@ -1,6 +1,6 @@
 {
   "name": "module-adaptor",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Adapter for ES6 modules",
   "main": "dist/bundle.js",
   "scripts": {
@@ -42,6 +42,7 @@
   "license": "MIT",
   "private": false,
   "optionalDependencies": {
+    "mime": "4.0.6",
     "url-join": "^5.0.0"
   },
   "engines": {

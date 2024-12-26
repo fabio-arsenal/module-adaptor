@@ -18,6 +18,7 @@ module.exports = {
                 include: [
                     path.resolve(__dirname, 'src'), // Include your source code
                     path.resolve(__dirname, 'node_modules/url-join'), // Include the specific module
+                    path.resolve(__dirname, 'node_modules/mime'), // Include the specific module
                 ],
                 options: {
                     presets: [

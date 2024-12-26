@@ -18,7 +18,7 @@ const packageJsonData = JSON.parse(
 
 // await execa(`npm profile get --registry=https://registry.npmjs.org/ `, { shell: true, stdio: 'inherit' });
 
-await Promise.all(packageDirs.map((item) => {
+await Promise.all(['.'].map((item) => {
     const publishCmd = `npm publish --tag ${argv.tag} --registry=https://registry.npmjs.org/ --access public`;
     return execa(publishCmd, { shell: true, stdio: 'inherit', cwd: path.join(rootDir, item) });
 }))
