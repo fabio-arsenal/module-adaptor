@@ -1,5 +1,5 @@
-const join = require('url-join');
-const mime = require('mime');
+import join from 'url-join';
+import mime from 'mime';
 
-export const urlJoin = (...args) => join(...args);
+export const urlJoin = (args) => join(...args);
 export const getMimeType = (path) => mime.getType(path);
