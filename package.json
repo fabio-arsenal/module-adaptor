@@ -1,6 +1,6 @@
 {
   "name": "@fabio-arsenal/module-adaptor",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Adapter for ES6 modules",
   "main": "dist/bundle.js",
   "scripts": {
@@ -42,7 +42,7 @@
   "author": "fabio <fabio@arsenalbio.com>",
   "license": "MIT",
   "private": false,
-  "optionalDependencies": {
+  "dependencies": {
     "mime": "4.0.6",
     "url-join": "^5.0.0"
   },
